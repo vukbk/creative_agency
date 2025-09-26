@@ -1,0 +1,129 @@
+@keyframes arrow-moving {
+	0% {
+		transform: translate(0, 0) rotate(-45deg);
+	}
+	45% {
+		transform: translate(100%, -100%) rotate(-45deg);
+	}
+	50% {
+		transform: translate(-100%, 100%) rotate(-45deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(-45deg);
+	}
+}
+
+@keyframes pulse-shadow {
+	0% {
+		box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.7);
+	}
+	50% {
+		box-shadow: 0 0 20px 5px rgba(31, 128, 83, 0.8);
+	}
+	100% {
+		box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.7);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		filter: blur(20px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in-left {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+		filter: blur(50px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes fade-in-right {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+		filter: blur(50px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes fade-in-up {
+	0% {
+		transform: translateY(100%);
+		filter: blur(50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+
+@keyframes word-fade {
+	0% {
+		opacity: 0;
+		filter: blur(5px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes blur-effect {
+	0% {
+		transform: scale(1.0);
+		filter: blur(0);
+	}
+	50% {
+		transform: scale(1.05);
+		filter: blur(5px);
+	}
+	100% {
+		transform: scale(1.0);
+		filter: blur(0);
+	}
+}
+
+.fade-in-left {
+	animation: fade-in-left 1.5s both;
+	animation-timeline: view();
+	animation-range: entry 15% cover 50%;
+}
+
+.fade-in-right {
+	animation: fade-in-right 1.5s both;
+	animation-timeline: view();
+	animation-range: entry 15% cover 50%;
+}
+
+.fade-in-up {
+	animation: fade-in-up 1s both;
+	animation-timeline: view();
+	animation-range: entry 15% cover 50%;
+}
